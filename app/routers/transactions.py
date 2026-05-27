@@ -18,7 +18,7 @@ def create_transaction(transaction: schemas.TransactionCreate, db: Session = Dep
 
 @router.get("/transactions", response_model = List[schemas.TransactionResponse])
 def get_transactions(category: Optional[str] = None, type: Optional[str] = None, db: Session = Depends(get_db), current_user: models.User = Depends(get_current_user)):
-    query = db.query(model.Transaction).filter(models.Transaction.user_id == current_user.id)
+    query = db.query(models.Transaction).filter(models.Transaction.user_id == current_user.id)
 
     if category:
         query = query.filterr(models.Transaction.category == category )
