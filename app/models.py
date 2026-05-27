@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Enum
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from apop.database import Base
+from app.database import Base
 import enum
 
 class TransactionType(enum.Enum):
@@ -12,11 +12,11 @@ class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    email = Column(String, uique = True, index = True, nullable = False )
+    email = Column(String, unique = True, index = True, nullable = False )
     hashed_password = Column(String, nullable = False)
-    created_at - = Column(DateTime(timezone=True), server_default=func.now())
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
 
-    transactions = realtionship("Transaction", back_populates="owner")
+    transactions = relationship("Transaction", back_populates="owner")
 
 class Transaction(Base):
     __tablename__ = "transactions"

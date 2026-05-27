@@ -31,7 +31,7 @@ class TransactionCreate(BaseModel):
     description: Optional[str] = None
     type: TransactionType
 
-class TransaactionUpdate(BaseModel):
+class TransactionUpdate(BaseModel):
     amount: Optional[float] = None
     category: Optional[str] = None
     description: Optional[str] = None
