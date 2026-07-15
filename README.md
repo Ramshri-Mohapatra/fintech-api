@@ -1,6 +1,6 @@
 # Fintech API — Personal Finance Tracker
 ![CI](https://github.com/Ramshri-Mohapatra/fintech-api/actions/workflows/ci.yml/badge.svg)
-**Live API:** https://fintech-api-production-bbd9.up.railway.app/docs
+**Live API:** https://fintech-api-n3ds.onrender.com/docs
 
 A production-ready REST API for personal finance tracking, built with FastAPI, PostgreSQL, JWT authentication, Docker, and CI/CD via GitHub Actions.
 
