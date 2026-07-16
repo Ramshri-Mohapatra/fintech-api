@@ -65,4 +65,4 @@ uvicorn app.main:app --reload
 
 ## Live Documentation
 
-API docs available at `/docs` once running.
+API docs available at `/docs` once running. Check it out!
